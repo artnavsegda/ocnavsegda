@@ -1,6 +1,5 @@
+FRAMEWORKS:= -framework Foundation
+LDFLAGS:= $(FRAMEWORKS)
+
 clean:
 	rm hello
-
-hello:
-	clang -framework Foundation hello.m -o hello
-
