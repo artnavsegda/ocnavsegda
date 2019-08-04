@@ -6,6 +6,6 @@ int main()
 	NSLog(@"%p", host);
 	NSLog(@"%@", host);
 
-	//double seconds = [now timeIntervalSince1970];
-	//NSLog(@"%f", seconds);
+	NSString *hostname = [host localizedName];
+	NSLog(@"%@", hostname);
 }

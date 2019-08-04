@@ -2,4 +2,4 @@ FRAMEWORKS:= -framework Foundation
 LDFLAGS:= $(FRAMEWORKS)
 
 clean:
-	rm hello instancing
+	rm hello instancing date host string
