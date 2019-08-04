@@ -8,4 +8,7 @@ int main()
 
 	double seconds = [now timeIntervalSince1970];
 	NSLog(@"%f", seconds);
+
+	NSDate *later = [now dateByAddingTimeInterval:100000];
+	NSLog(@"%@", later);
 }
