@@ -2,10 +2,10 @@
 
 int main()
 {
-	NSDate *now = [NSDate date];
-	NSLog(@"%p", now);
-	NSLog(@"%@", now);
+	NSHost *host = [NSHost currentHost];
+	NSLog(@"%p", host);
+	NSLog(@"%@", host);
 
-	double seconds = [now timeIntervalSince1970];
-	NSLog(@"%f", seconds);
+	//double seconds = [now timeIntervalSince1970];
+	//NSLog(@"%f", seconds);
 }
