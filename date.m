@@ -11,4 +11,6 @@ int main()
 
 	NSDate *later = [now dateByAddingTimeInterval:100000];
 	NSLog(@"%@", later);
+
+	NSLog(@"%f", [[NSDate date] timeIntervalSince1970]);
 }
