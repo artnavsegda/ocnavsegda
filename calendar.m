@@ -14,4 +14,6 @@ int main()
 
 	NSCalendar *cal = [NSCalendar currentCalendar];
 	NSLog(@"%@", [cal calendarIdentifier]);
+	unsigned long day = [cal ordinalityOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:now];
+	NSLog(@"%lu", day);
 }
