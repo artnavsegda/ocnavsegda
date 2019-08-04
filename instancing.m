@@ -2,5 +2,6 @@
 
 int main()
 {
-	NSLog(@"Hello");
+	NSDate *now = [NSDate date];
+	NSLog(@"%p", now);
 }

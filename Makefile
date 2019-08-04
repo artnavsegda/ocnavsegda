@@ -2,4 +2,4 @@ FRAMEWORKS:= -framework Foundation
 LDFLAGS:= $(FRAMEWORKS)
 
 clean:
-	rm hello
+	rm hello instancing
