@@ -4,4 +4,5 @@ int main()
 {
 	NSDate *now = [NSDate date];
 	NSLog(@"%p", now);
+	NSLog(@"%@", now);
 }
