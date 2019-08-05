@@ -3,4 +3,4 @@ LDFLAGS:= $(shell gnustep-config --base-libs)
 OBJCFLAGS = $(shell gnustep-config --objc-flags)
 
 clean:
-	rm hello instancing date host string calendar
+	rm *.d hello instancing date host string calendar
