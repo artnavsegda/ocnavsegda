@@ -1,5 +1,6 @@
-FRAMEWORKS:= -framework Foundation
-LDFLAGS:= $(FRAMEWORKS)
+# FRAMEWORKS:= -framework Foundation
+LDFLAGS:= $(shell gnustep-config --base-libs)
+OBJCFLAGS = $(shell gnustep-config --objc-flags)
 
 clean:
 	rm hello instancing date host string calendar
