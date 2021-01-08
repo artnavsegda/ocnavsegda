@@ -23,6 +23,27 @@
     [self.locationManager startMonitoringForRegion:self.myBeaconRegion];
 }
 
+- (void)locationManager:(CLLocationManager*)manager didEnterRegion:(CLRegion*)region
+{
+    [self.locationManager startRangingBeaconsInRegion:self.myBeaconRegion];
+}
+ 
+-(void)locationManager:(CLLocationManager*)manager didExitRegion:(CLRegion*)region
+{
+    [self.locationManager stopRangingBeaconsInRegion:self.myBeaconRegion];
+}
+ 
+-(void)locationManager:(CLLocationManager*)manager
+       didRangeBeacons:(NSArray*)beacons
+              inRegion:(CLBeaconRegion*)region
+{    
+    CLBeacon *foundBeacon = [beacons firstObject];
+    
+    // You can retrieve the beacon data from its properties
+    //NSString *uuid = foundBeacon.proximityUUID.UUIDString;
+    //NSString *major = [NSString stringWithFormat:@"%@", foundBeacon.major];
+    //NSString *minor = [NSString stringWithFormat:@"%@", foundBeacon.minor];
+}
 
 - (IBAction)myStuff:(id)sender {
     NSLog (@"Hello, World!");
