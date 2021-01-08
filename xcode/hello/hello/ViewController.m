@@ -19,4 +19,7 @@
 }
 
 
+- (IBAction)myStuff:(id)sender {
+    NSLog (@"Hello, World!");
+}
 @end

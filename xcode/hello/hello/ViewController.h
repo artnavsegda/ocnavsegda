@@ -9,6 +9,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)myStuff:(id)sender;
 
 @end
 
