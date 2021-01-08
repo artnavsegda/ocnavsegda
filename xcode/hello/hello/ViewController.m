@@ -36,7 +36,9 @@
 -(void)locationManager:(CLLocationManager*)manager
        didRangeBeacons:(NSArray*)beacons
               inRegion:(CLBeaconRegion*)region
-{    
+{
+    NSLog (@"Beacon found !!!");
+    
     CLBeacon *foundBeacon = [beacons firstObject];
     
     // You can retrieve the beacon data from its properties
