@@ -25,9 +25,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkD-Rc-RnF">
-                                <rect key="frame" x="153" y="352" width="68" height="30"/>
+                                <rect key="frame" x="141" y="352" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Push Me !"/>
+                                <state key="normal" title="Request Auth"/>
                                 <connections>
                                     <action selector="myStuff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWY-nF-dGy"/>
                                 </connections>

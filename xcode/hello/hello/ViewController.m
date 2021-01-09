@@ -19,6 +19,7 @@
     if ([CLLocationManager isRangingAvailable]) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
+        [self.locationManager requestWhenInUseAuthorization];
         NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"c7c1a1bf-bb00-4cad-8704-9f2d2917ded2"];
         self.myBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"art.navsegda.testregion"];
         [self.locationManager startRangingBeaconsInRegion:self.myBeaconRegion];
@@ -45,5 +46,6 @@
 
 - (IBAction)myStuff:(id)sender {
     NSLog (@"Hello, World!");
+    
 }
 @end
