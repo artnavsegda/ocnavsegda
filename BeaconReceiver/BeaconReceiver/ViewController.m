@@ -46,6 +46,7 @@
     }
     
     self.statusLabel.text = @"Start";
+    [self.locationManager startRangingBeaconsInRegion:self.myBeaconRegion];
 }
 
 - (void)didReceiveMemoryWarning
