@@ -78,9 +78,11 @@
     CLBeacon *foundBeacon = [beacons firstObject];
     
     // You can retrieve the beacon data from its properties
-    //NSString *uuid = foundBeacon.proximityUUID.UUIDString;
+    NSString *uuid = foundBeacon.proximityUUID.UUIDString;
     //NSString *major = [NSString stringWithFormat:@"%@", foundBeacon.major];
     //NSString *minor = [NSString stringWithFormat:@"%@", foundBeacon.minor];
+    
+    NSLog(@"UUID: %@", uuid);
 }
 
 @end
