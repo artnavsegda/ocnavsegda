@@ -16,43 +16,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if ([CLLocationManager isRangingAvailable]) {
-        self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = self;
-        [self.locationManager requestWhenInUseAuthorization];
-        NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"c7c1a1bf-bb00-4cad-8704-9f2d2917ded2"];
-        self.myBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"art.navsegda.testregion"];
-        [self.locationManager startMonitoringForRegion:self.myBeaconRegion];
-    }
-    else
-    {
-        NSLog (@"No beacon use");
-    }
-}
-   
-- (void)locationManager:(CLLocationManager*)manager didEnterRegion:(CLRegion*)region
-{
-    NSLog (@"didEnterRegion");
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self.locationManager requestWhenInUseAuthorization];
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"c7c1a1bf-bb00-4cad-8704-9f2d2917ded2"];
+    self.myBeaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"art.navsegda.testregion"];
     [self.locationManager startRangingBeaconsInRegion:self.myBeaconRegion];
-}
- 
--(void)locationManager:(CLLocationManager*)manager didExitRegion:(CLRegion*)region
-{
-    NSLog (@"didExitRegion");
-    [self.locationManager stopRangingBeaconsInRegion:self.myBeaconRegion];
 }
 
 -(void)locationManager:(CLLocationManager*)manager
        didRangeBeacons:(NSArray*)beacons
               inRegion:(CLBeaconRegion*)region
 {
-    NSLog (@"didRangeBeacons");
     CLBeacon *foundBeacon = [beacons firstObject];
     
     // You can retrieve the beacon data from its properties
-    //NSString *uuid = foundBeacon.proximityUUID.UUIDString;
-    //NSString *major = [NSString stringWithFormat:@"%@", foundBeacon.major];
-    //NSString *minor = [NSString stringWithFormat:@"%@", foundBeacon.minor];
+    NSString *uuid = foundBeacon.proximityUUID.UUIDString;
+    NSString *major = [NSString stringWithFormat:@"%@", foundBeacon.major];
+    NSString *minor = [NSString stringWithFormat:@"%@", foundBeacon.minor];
+    
+    NSLog(@"UUID: %@", uuid);
 }
 
 - (IBAction)myStuff:(id)sender {
